@@ -66,7 +66,6 @@ input,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--l
 </head>
 <body>
 <div class="app">
-<div class="sw" id="sw"></div>
 
 <div id="login">
   <h1>GoldPoint</h1>
@@ -128,7 +127,6 @@ input,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--l
 <script>
 var TH=[['violet','#3b2a96'],['ocean','#0e5a8a'],['emerald','#0d6b52'],['sunset','#b8325a'],['gold','#0b0b0d']];
 function setTheme(n){document.documentElement.setAttribute('data-theme',n);document.querySelectorAll('#sw i').forEach(function(e){e.className=e.dataset.n===n?'on':''})}
-TH.forEach(function(t){var e=document.createElement('i');e.dataset.n=t[0];e.style.background=t[1];e.onclick=function(){setTheme(t[0])};document.getElementById('sw').appendChild(e)});
 setTheme('violet');
 var RATE=10,MIN=5,S={email:'',pts:0,usd:0,log:[]};
 function $(i){return document.getElementById(i)}
